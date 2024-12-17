@@ -1,0 +1,31 @@
+.app-layout {
+  display: flex;
+  transition: margin-left 0.3s ease, width 0.3s ease; /* Smooth transition for layout */
+}
+
+.content {
+  margin-left: 80px; /* Default margin when sidebar is collapsed */
+  width: calc(100% - 80px);
+  transition: margin-left 0.3s ease, width 0.3s ease; /* Smooth transition for content */
+}
+
+.content.expanded { 
+  margin-left: 250px; /* Margin when sidebar is expanded */
+  width: calc(100% - 250px);
+}
+
+@media only screen and (max-width: 1200px) { 
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+    /* margin-top: 70px; */
+  }
+   .content.expanded { 
+    margin-left: 0px; /* Margin when sidebar is expanded */
+     width:100% ;  
+   }  
+}

@@ -1,0 +1,225 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--navbar-bg);
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-bottom: 1px solid rgb(185, 185, 185);
+}
+
+.brand {
+  background: linear-gradient(to right, #ff006a, #ff812e,#ff812e,#f34386 );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navLink {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--link-hover-color);
+}
+
+.search {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  background-color: var(--search-bg);
+  border-radius: 4px;
+  color: var(--text-color);
+  width: 250px;
+  transition: background-color 0.3s ease;
+}
+
+.search::placeholder {
+  color: var(--placeholder-color);
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--search-focus-bg);
+}
+.themeToggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  /* margin-top: 150px; */
+}
+
+.themeToggle:hover {
+  color: var(--hover-color);
+}
+
+.toggleButton {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 60px; 
+  left: 0;
+  right: 0;
+  background-color: var(--navbar-bg);
+  padding: 20px;
+  z-index: 999;
+}
+
+.mobileMenuLinks {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.mobileMenuLinks li {
+  margin-bottom: 15px;
+}
+
+.mobileMenuLinks a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 26px;
+}
+
+.mobileMenuLinks a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Dark Mode Overrides */
+.dark .navbar {
+  background-color: var(--navbar-bg-dark);
+  border-bottom: 1px solid var(--border-color-dark);
+}
+
+.dark .navLink {
+  color: var(--link-color-dark);
+}
+
+.dark .navLink:hover {
+  color: var(--link-hover-color-dark);
+}
+
+.dark .search {
+  border: 1px solid var(--border-color-dark);
+  background-color: var(--search-bg-dark);
+  color: var(--text-color-dark);
+}
+
+.dark .search:focus {
+  background-color: var(--search-focus-bg-dark);
+}
+
+.dark .mobileMenu {
+  background-color: var(--navbar-bg-dark);
+}
+
+.dark .mobileMenuLinks a {
+  color: var(--link-color-dark);
+}
+
+.dark .mobileMenuLinks a:hover {
+  color: var(--link-hover-color-dark);
+}
+
+/* Light Mode Overrides */
+.light .navbar {
+  background-color: var(--navbar-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.light .navLink {
+  color: var(--link-color);
+}
+
+.light .navLink:hover {
+  color: var(--link-hover-color);
+}
+
+.light .search {
+  border: 1px solid var(--border-color);
+  background-color: var(--search-bg);
+  color: var(--text-color);
+}
+
+.light .search:focus {
+  background-color: var(--search-focus-bg);
+}
+
+.light .mobileMenu {
+  background-color: var(--navbar-bg);
+}
+
+.light .mobileMenuLinks a {
+  color: var(--link-color);
+}
+
+.light .mobileMenuLinks a:hover {
+  color: var(--link-hover-color);
+}
+
+@media (min-width: 769px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 0;
+    padding-left: 20px;
+  }
+
+  .navLinks {
+    display: none;
+
+  }
+.mobileMenuLinks{
+  background-color:var(--navbar-bg);
+font-size: 25px;
+/* font-weight: 500; */
+}
+
+.mobileMenuLinks li{
+  font-size: 15px;
+}
+  .toggleButton {
+    display: block;
+    padding-top: 15px;
+    padding-right: 25px;
+  }
+
+  .brand {
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: bold;
+    flex-grow: 1;
+  }
+
+  .search {
+    width: 100%;
+  }
+}
