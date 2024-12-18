@@ -12,14 +12,14 @@ function Overview() {
   return (
     <>
       <Helmet>
-        <title>Overview | Affworld Policies</title>
+        <title>Overview | XpertOneHealth Policies</title>
         <meta
           name="description"
-          content="Explore Affworld's policy overview, including Terms and Conditions, Privacy Policy, Cancellation and Refund Policy, Customer Support, and Pricing Details."
+          content="Explore XpertOneHealth policy overview, including Terms and Conditions, Privacy Policy, Cancellation and Refund Policy, Customer Support, and Pricing Details."
         />
         <meta
           name="keywords"
-          content="Affworld, policies, terms and conditions, privacy policy, refund policy, cancellation policy, customer support, pricing details"
+          content="XpertOneHealth policies, terms and conditions, privacy policy, refund policy, cancellation policy, customer support, pricing details"
         />
       </Helmet>
       <div className={styles.content}>
